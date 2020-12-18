@@ -6,17 +6,6 @@ app = FastAPI(title="CyberShai API",
     version="0.1",)
 
 
-# @app.get("/", tags=["API Root"])
-# def root():
-#     return {"message": "Hello World"}
-# app.include_router(
-#     sentiment.router,
-#     prefix="/api/v1",
-#     tags=["CyberShai Endpoints"],
-#     responses={404: {"description": "Not found"}},
-# )
-
-
 @app.get("/", tags=["API Root"])
 def welcome():
     return {"message": "Welcome to CyberShai API"}
@@ -29,24 +18,24 @@ def colocations_by_cohort():
             "cohort_4": "Muchos",
             "cohort_5": "Muchísimos"}
 
-@app.get("/students-can-pay", tags=["API statistics"])
-def colocations_by_cohort():
+@app.get("/students-can-pay")
+def students_can_pay():
     return {"cohort_1": "1000",
             "cohort_2": "10000",
             "cohort_3": "100000",
             "cohort_4": "1000000",
             "cohort_5": "10000000"}
 
-@app.get("/students-report", tags=["API statistics"])
-def colocations_by_cohort():
+@app.get("/students-report")
+def students_report():
     return {"job_title": "trabajo soñado",
             "company": "FANG",
             "starting_date": "01/02/2021",
             "salary_increment_porcent": "100%",
             }
 
-@app.get("/global-colocations", tags=["API statistics"])
-def colocations_by_cohort():
+@app.get("/global-colocations")
+def global_colocations():
     return {"cohort_1": "4",
             "cohort_2": "5",
             "cohort_3": "6",
