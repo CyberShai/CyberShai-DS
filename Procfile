@@ -1,1 +1,1 @@
-web: --bind 0.0.0.0:8000 app/main:app
+uvicorn --host=0.0.0.0 --port 8080 app.main:app
