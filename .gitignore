@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# local enviroment
+.venv/
+hack_up.sh
