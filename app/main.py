@@ -6,11 +6,11 @@ app = FastAPI(title="CyberShai API",
     version="0.1",)
 
 
-@app.get("/", tags=["API Root"])
+@app.get("/")
 def welcome():
     return {"message": "Welcome to CyberShai API"}
 
-@app.get("/colocations-by-cohort", tags=["API statistics"])
+@app.get("/colocations-by-cohort")
 def colocations_by_cohort():
     return {"cohort_1": "Pocos",
             "cohort_2": "Más",
