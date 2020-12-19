@@ -7,11 +7,11 @@ app = FastAPI(title="CyberShai API",
 
 
 @app.get("/")
-def welcome():
+async def welcome():
     return {"message": "Welcome to CyberShai API"}
 
 @app.get("/colocations-by-cohort")
-def colocations_by_cohort():
+async def colocations_by_cohort():
     return {"cohort_1": "Pocos",
             "cohort_2": "Más",
             "cohort_3": "Bastantes",
@@ -19,7 +19,7 @@ def colocations_by_cohort():
             "cohort_5": "Muchísimos"}
 
 @app.get("/students-can-pay")
-def students_can_pay():
+async def students_can_pay():
     return {"cohort_1": "1000",
             "cohort_2": "10000",
             "cohort_3": "100000",
@@ -27,7 +27,7 @@ def students_can_pay():
             "cohort_5": "10000000"}
 
 @app.get("/students-report")
-def students_report():
+async def students_report():
     return {"job_title": "trabajo soñado",
             "company": "FANG",
             "starting_date": "01/02/2021",
@@ -35,7 +35,7 @@ def students_report():
             }
 
 @app.get("/global-colocations")
-def global_colocations():
+async def global_colocations():
     return {"cohort_1": "4",
             "cohort_2": "5",
             "cohort_3": "6",
